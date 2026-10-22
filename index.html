@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Micah Chebus | Research & M&E Specialist</title>
+<meta name="description" content="Micah Chebus — Research Associate, M&E Specialist and Data Analyst based in Nairobi, Kenya. 5+ years delivering qualitative and quantitative research for UN agencies, INGOs and consultancies across Africa and Asia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14284b; --navy-2:#1d3a6b; --gold:#e8c547; --gold-soft:#f6ebc0;
+    --ink:#1b2333; --muted:#5a6478; --line:#e3e7ef; --bg:#f7f8fb; --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px}
+  a{color:var(--navy-2)}
+  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;line-height:1.2}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 2px 10px rgba(0,0,0,.15)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{color:#fff;font-weight:700;text-decoration:none;font-size:1.05rem;letter-spacing:.3px}
+  .brand span{color:var(--gold)}
+  .links{display:flex;gap:4px;list-style:none}
+  .links a{color:#d9e1f0;text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;padding:8px 10px;border-radius:6px}
+  .links a:hover,.links a.active{color:var(--navy);background:var(--gold)}
+  .menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+  @media(max-width:900px){
+    .menu-btn{display:block}
+    .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--navy);padding:10px 20px 18px}
+    .links.open{display:flex}
+  }
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:72px 0 64px}
+  .hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+  .eyebrow{color:var(--gold);font-weight:600;font-size:.85rem;letter-spacing:1.2px;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:8px 0 10px;color:#fff}
+  .hero .tagline{color:var(--gold);font-weight:600;font-size:1.05rem;margin-bottom:18px}
+  .hero p.lead{color:#d9e1f0;font-size:1.05rem;max-width:620px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0;color:#c9d3e6;font-size:.92rem}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;font-size:.95rem;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-ghost{border:2px solid rgba(255,255,255,.5);color:#fff}
+  .photo{justify-self:center;width:280px;height:280px;border-radius:50%;border:6px solid var(--gold);overflow:hidden;background:var(--navy-2);display:grid;place-items:center;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .photo .initials{font-family:"Source Serif 4",serif;font-size:5rem;color:var(--gold);font-weight:700}
+  @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.photo{width:200px;height:200px;order:-1}.photo .initials{font-size:3.6rem}}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-36px;position:relative}
+  .stat{background:var(--card);border-radius:12px;padding:22px;text-align:center;box-shadow:0 8px 24px rgba(20,40,75,.10);border-top:4px solid var(--gold)}
+  .stat b{display:block;font-family:"Source Serif 4",serif;font-size:2rem;color:var(--navy)}
+  .stat span{color:var(--muted);font-size:.88rem}
+  @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* SECTIONS */
+  section{padding:76px 0;scroll-margin-top:64px}
+  section.alt{background:#fff}
+  .sec-head{text-align:center;margin-bottom:40px}
+  .sec-head h2{font-size:2rem;color:var(--navy);display:inline-block;padding:6px 26px;background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--gold-soft));border-radius:4px}
+  .sec-head p{color:var(--muted);max-width:680px;margin:14px auto 0}
+
+  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+  .about-grid p{margin-bottom:14px}
+  @media(max-width:850px){.about-grid{grid-template-columns:1fr}}
+  .panel{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:24px}
+  .panel h3{color:var(--navy);font-size:1.15rem;margin-bottom:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:#fff;border:1px solid var(--line);color:var(--navy);padding:5px 12px;border-radius:999px;font-size:.84rem;font-weight:500}
+  .chip.gold{background:var(--gold-soft);border-color:var(--gold)}
+  .langs{width:100%;border-collapse:collapse;margin-top:6px;font-size:.92rem}
+  .langs td{padding:7px 0;border-bottom:1px solid var(--line)}
+  .langs td:last-child{text-align:right;color:var(--muted)}
+
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}
+  .skill-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+  .skill-card h4{color:var(--navy);font-size:1rem;margin-bottom:10px}
+  .skill-card ul{list-style:none}
+  .skill-card li{padding:4px 0 4px 20px;position:relative;font-size:.93rem;color:#323b4e}
+  .skill-card li::before{content:"▸";position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* SERVICES */
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .service{background:var(--card);border-radius:12px;padding:26px;border:1px solid var(--line);transition:box-shadow .2s,transform .2s}
+  .service:hover{box-shadow:0 12px 28px rgba(20,40,75,.12);transform:translateY(-3px)}
+  .service .num{font-family:"Source Serif 4",serif;color:var(--gold);font-size:1.8rem;font-weight:700}
+  .service h3{color:var(--navy);font-size:1.15rem;margin:4px 0 10px}
+  .service p{color:var(--muted);font-size:.93rem}
+
+  /* PROJECTS */
+  .filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:28px}
+  .filter{border:1px solid var(--navy);background:#fff;color:var(--navy);padding:7px 16px;border-radius:999px;font-weight:600;font-size:.85rem;cursor:pointer;font-family:inherit}
+  .filter.on{background:var(--navy);color:#fff}
+  .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+  .proj{background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:10px;padding:20px;display:flex;flex-direction:column}
+  .proj .client{font-size:.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--navy-2)}
+  .proj h3{font-family:Inter,sans-serif;font-size:1rem;font-weight:600;margin:6px 0 10px;color:var(--ink)}
+  .proj .row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+  .tag{font-size:.75rem;padding:3px 9px;border-radius:5px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+  .tag.n{background:var(--gold-soft);color:var(--navy);border-color:var(--gold);font-weight:600}
+  .proj p{font-size:.88rem;color:var(--muted);margin-top:auto}
+  .proj.hide{display:none}
+  @media(max-width:400px){.projects{grid-template-columns:1fr}}
+
+  /* TIMELINE */
+  .timeline{position:relative;max-width:860px;margin:0 auto}
+  .timeline::before{content:"";position:absolute;left:14px;top:6px;bottom:6px;width:3px;background:var(--line)}
+  .job{position:relative;padding:0 0 34px 48px}
+  .job::before{content:"";position:absolute;left:5px;top:6px;width:21px;height:21px;border-radius:50%;background:var(--gold);border:4px solid #fff;box-shadow:0 0 0 2px var(--navy)}
+  .job .when{font-size:.78rem;font-weight:700;letter-spacing:1px;color:var(--navy-2);text-transform:uppercase}
+  .job h3{color:var(--navy);font-size:1.25rem;margin:4px 0 2px}
+  .job .org{color:var(--muted);font-weight:500;margin-bottom:10px}
+  .job ul{padding-left:18px}
+  .job li{font-size:.93rem;margin-bottom:4px;color:#323b4e}
+
+  /* EDUCATION */
+  .edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .edu-card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:22px;border-top:4px solid var(--navy)}
+  .edu-card .when{font-size:.8rem;color:var(--muted);font-weight:600}
+  .edu-card h3{color:var(--navy);font-size:1.1rem;margin:6px 0}
+  .edu-card .badge{display:inline-block;margin-top:8px;background:var(--gold-soft);color:var(--navy);font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:5px}
+
+  /* CERTS */
+  .certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .cert{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+  .cert .ico{flex:none;width:38px;height:38px;border-radius:8px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:700}
+  .cert h4{font-size:.95rem;color:var(--ink);font-weight:600}
+  .cert small{color:var(--muted);display:block}
+
+  /* CONTACT */
+  .contact{background:var(--navy);color:#fff}
+  .contact .sec-head p{color:#c9d3e6}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .c-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:24px;text-decoration:none;color:#fff;transition:background .2s}
+  .c-card:hover{background:rgba(232,197,71,.15)}
+  .c-card .k{color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+  .c-card b{display:block;margin-top:6px;font-size:1rem;word-break:break-word}
+  footer{background:#0e1d38;color:#8e9ab3;text-align:center;padding:22px;font-size:.85rem}
+  .to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;text-decoration:none;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:opacity .2s}
+  .to-top.show{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav">
+    <a href="#home" class="brand">Micah <span>Chebus</span></a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <ul class="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Research &amp; Evaluation Professional</div>
+      <h1>Micah Chebus</h1>
+      <div class="tagline">Research Associate | M&amp;E Specialist | Data &amp; Insights | Proposal Writing</div>
+      <p class="lead">I turn field data into evidence that decision-makers can trust — from proposal and tool design, through data collection and quality assurance, to analysis and reporting for UN agencies, INGOs and research consultancies.</p>
+      <div class="meta">
+        <span>📍 Nairobi, Kenya</span>
+        <span>📞 +254 743 528 241</span>
+        <span>✉️ micahchebus9@gmail.com</span>
+      </div>
+      <div class="btns">
+        <a href="#projects" class="btn btn-gold">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        <a href="https://www.linkedin.com/in/micah-chebus" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      </div>
+    </div>
+    <div class="photo">
+      <!-- Upload your photo to the repo as profile.jpg and it will appear here automatically -->
+      <img src="profile.jpg" alt="Micah Chebus" onerror="this.remove()">
+      <span class="initials">MC</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>5+</b><span>Years of experience</span></div>
+    <div class="stat"><b>23</b><span>Research &amp; consulting assignments</span></div>
+    <div class="stat"><b>6,600+</b><span>Survey respondents analysed</span></div>
+    <div class="stat"><b>10+</b><span>Countries covered</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>About Me</h2>
+      <p>Economics &amp; Statistics graduate with professional certification in Monitoring &amp; Evaluation.</p>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>I am a dedicated, results-driven research and data professional with over five years of experience delivering qualitative and quantitative research across Africa and Asia. I have led and supported end-to-end projects — proposal development, tool design, field coordination, data analysis and reporting — for UN agencies, INGOs and research consultancies.</p>
+        <p>My methodological foundation spans both qualitative and quantitative research, with particular depth in <strong>baseline, mid-term and end-line evaluations</strong>. I have worked with health and WASH data systems aligned with national and donor reporting frameworks, and regularly manage several projects at once with diverse, multidisciplinary teams.</p>
+        <p>In the field I design tools and conduct IDIs, KIIs, FGDs and observations; at the desk I clean, validate and analyse large survey datasets in SPSS, STATA, R, Python and Excel. Whatever the assignment, the goal is the same: rigorous, timely outputs that support data-driven decisions and lasting social impact.</p>
+      </div>
+      <div>
+        <div class="panel" style="margin-bottom:18px">
+          <h3>Tools &amp; Platforms</h3>
+          <div class="chips">
+            <span class="chip gold">SPSS</span><span class="chip gold">STATA</span><span class="chip gold">R</span><span class="chip gold">Python</span><span class="chip gold">Excel</span><span class="chip gold">Power BI</span><span class="chip">EViews</span><span class="chip">JASP</span><span class="chip">GretL</span><span class="chip">KoboToolbox</span><span class="chip">ODK</span><span class="chip">SurveyCTO</span><span class="chip">MS Word</span><span class="chip">PowerPoint</span>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Languages</h3>
+          <table class="langs">
+            <tr><td>English</td><td>Fluent</td></tr>
+            <tr><td>Swahili</td><td>Fluent</td></tr>
+            <tr><td>Kalenjin (Sabaot/Dorobo)</td><td>Native</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills">
+      <div class="skill-card">
+        <h4>Research Design</h4>
+        <ul><li>Quantitative &amp; qualitative methods</li><li>Sampling design &amp; sample size</li><li>Survey, KII, FGD, IDI &amp; observation tools</li><li>Evaluation frameworks</li></ul>
+      </div>
+      <div class="skill-card">
+        <h4>Data Collection &amp; Quality</h4>
+        <ul><li>Survey scripting &amp; deployment</li><li>Enumerator training &amp; supervision</li><li>Daily data monitoring</li><li>Cleaning, validation &amp; QA checks</li></ul>
+      </div>
+      <div class="skill-card">
+        <h4>Analysis &amp; Reporting</h4>
+        <ul><li>Large-scale survey analysis</li><li>Cross-tabulations &amp; visualisation</li><li>Report &amp; policy brief writing</li><li>Client presentations</li></ul>
+      </div>
+      <div class="skill-card">
+        <h4>Project &amp; Business Development</h4>
+        <ul><li>Technical &amp; financial proposals</li><li>Inception reports</li><li>Budget &amp; team management</li><li>Client &amp; stakeholder engagement</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Services Offered</h2>
+      <p>Support across the full research and evaluation cycle — from the bid to the final report.</p>
+    </div>
+    <div class="services">
+      <div class="service"><div class="num">01</div><h3>Baseline, Mid-term &amp; End-line Evaluations</h3><p>Design and delivery of programme evaluations, feasibility studies and assessments aligned to donor frameworks and SMART indicators.</p></div>
+      <div class="service"><div class="num">02</div><h3>Survey Data Analysis</h3><p>Cleaning, validation and statistical analysis of survey data in SPSS, STATA, R and Python, with tables, cross-tabs and clear visuals.</p></div>
+      <div class="service"><div class="num">03</div><h3>Tool Design &amp; Digital Data Collection</h3><p>Questionnaires, KII/FGD guides and checklists, scripted and deployed on KoboToolbox, ODK or SurveyCTO, with enumerator training.</p></div>
+      <div class="service"><div class="num">04</div><h3>Qualitative Research</h3><p>KIIs, FGDs and IDIs, including transcription, translation, coding and synthesis of findings into evidence.</p></div>
+      <div class="service"><div class="num">05</div><h3>Proposal &amp; Inception Report Writing</h3><p>Technical and financial proposals, methodologies and inception reports that win and set up assignments well.</p></div>
+      <div class="service"><div class="num">06</div><h3>Dashboards &amp; Reporting</h3><p>Power BI and Excel dashboards, analytical reports, policy briefs and client presentations of research findings.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Research &amp; Consulting Projects</h2>
+      <p>Selected assignments for UN agencies, INGOs and foundations across Africa and Asia.</p>
+    </div>
+    <div class="filters">
+      <button class="filter on" data-f="all">All</button>
+      <button class="filter" data-f="quant">Quantitative</button>
+      <button class="filter" data-f="qual">Qualitative</button>
+      <button class="filter" data-f="lead">Lead roles</button>
+      <button class="filter" data-f="eval">Evaluations &amp; Baselines</button>
+    </div>
+    <div class="projects" id="projGrid"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Professional Experience</h2>
+      <p>Research, data and coordination roles with consulting firms in Nairobi.</p>
+    </div>
+    <div class="timeline">
+      <div class="job">
+        <div class="when">September 2026 – Present</div>
+        <h3>Research &amp; Data Analyst</h3>
+        <div class="org">Infotrak Research and Consulting · Nairobi, Kenya</div>
+        <ul>
+          <li>Manage, clean, validate and analyse quantitative and qualitative data using Excel, SPSS and STATA.</li>
+          <li>Develop sampling designs, calculate sample sizes and allocate samples.</li>
+          <li>Build dashboards, visualisations and analytical reports, and turn findings into actionable insights.</li>
+          <li>Support methodology, tool development, proposals, client engagement and business development.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="when">September 2023 – Present</div>
+        <h3>Research Associate</h3>
+        <div class="org">Progress Inc. · Nairobi, Kenya</div>
+        <ul>
+          <li>Lead and coordinate multiple research projects from planning to reporting, on time and to standard.</li>
+          <li>Oversee data collection: tool design, enumerator training and field coordination.</li>
+          <li>Manage data quality (validation, cleaning, consistency checks), analysis and report writing.</li>
+          <li>Serve as key contact between internal teams and clients; support technical and financial proposals.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="when">September 2023 – March 2024</div>
+        <h3>Kenya Country Lead</h3>
+        <div class="org">Progress Inc. · Nairobi, Kenya</div>
+        <ul>
+          <li>Led Progress Inc.'s country operations, coordination and representation in Kenya.</li>
+          <li>Coordinated research operations, scheduling and team management across assignments.</li>
+          <li>Managed consultant relationships and partner engagement; contributed to business growth.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="when">February 2022 – May 2023</div>
+        <h3>Research Officer</h3>
+        <div class="org">Keymden Consultancy · Nairobi, Kenya</div>
+        <ul>
+          <li>Managed research implementation: tool development, data collection and analysis.</li>
+          <li>Coordinated field teams and enforced data quality standards.</li>
+          <li>Supported evaluation frameworks and research methodologies; contributed to final reports.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="when">February 2021 – November 2021</div>
+        <h3>Freelance Data Analyst</h3>
+        <div class="org">Independent</div>
+        <ul>
+          <li>Designed custom data collection instruments and conducted field data collection.</li>
+          <li>Applied analytics tools to generate insights and advised clients on data handling and reporting.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Education</h2>
+      <p>Academic and professional qualifications.</p>
+    </div>
+    <div class="edu">
+      <div class="edu-card"><div class="when">Jun 2026 – Jun 2027</div><h3>IBM Certificate in Data Analytics</h3><div>University of the People, Pasadena, California</div><span class="badge">In progress</span></div>
+      <div class="edu-card"><div class="when">Oct 2025 – Mar 2026</div><h3>Professional Certification in Monitoring &amp; Evaluation</h3><div>Kenya Institute of Management</div></div>
+      <div class="edu-card"><div class="when">2016 – 2020</div><h3>BSc. Economics and Statistics</h3><div>Chuka University, Kenya</div></div>
+      <div class="edu-card"><div class="when">2012 – 2015</div><h3>Kenya Certificate of Secondary Education</h3><div>Cheptais Boys Secondary School</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Trainings &amp; Certifications</h2>
+      <p>Continuous professional development in data, evaluation, gender and governance.</p>
+    </div>
+    <div class="certs" id="certGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Get In Touch</h2>
+      <p>Planning a baseline, evaluation or survey, or need support with analysis or a proposal? Let's talk.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="c-card" href="mailto:micahchebus9@gmail.com"><div class="k">01 · Email</div><b>micahchebus9@gmail.com</b></a>
+      <a class="c-card" href="https://wa.me/254743528241" target="_blank" rel="noopener"><div class="k">02 · WhatsApp</div><b>+254 743 528 241</b></a>
+      <a class="c-card" href="tel:+254743528241"><div class="k">03 · Call</div><b>+254 743 528 241</b></a>
+      <a class="c-card" href="https://www.linkedin.com/in/micah-chebus" target="_blank" rel="noopener"><div class="k">04 · LinkedIn</div><b>linkedin.com/in/micah-chebus</b></a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Micah Chebus · Nairobi, Kenya · References available on request</footer>
+<a href="#home" class="to-top" aria-label="Back to top">↑</a>
+
+<script>
+  // ---- Projects (edit here to add/remove) ----
+  // tags: quant, qual, lead, eval
+  const projects = [
+    ["UNDP Nepal","Third Party Monitoring of Provincial and Local Government Strengthening Program 2024–2029","Quantitative Data Analyst","Aug 2026","","quant eval","Extracted, cleaned and synthesised survey data; analysis, graphs and cross-tabs."],
+    ["Sign of Hope / BMZ","Phase II Feasibility Study – Verification and Update of SMART Indicators","Co-Lead / Data Analyst","Aug 2026","","quant lead eval","Led tool scripting, enumerator training, ward stakeholder engagement, field supervision and the feasibility report."],
+    ["FAWE / Mastercard Foundation","End-Term Evaluation of FAWE Models & Interventions in Uganda, Rwanda and Ethiopia (Scholars & Higher Education Access Program)","Quantitative Data Analyst","Mar – Apr 2026","430","quant eval","Data analysis, report and policy brief writing, daily updates with country leads, survey scripting and bid preparation."],
+    ["Sign of Hope / BMZ","Sustainable Educational Development for Youth and Girls, Diocese of Rumbek, South Sudan (Lakes & Warrap)","Statistician / Data Analyst","Dec 2025 – Feb 2026","284","quant","Quantitative analysis and reporting; tool scripting, enumerator training, inception report and proposal."],
+    ["PELUM Kenya","Baseline Survey – Promoting Agroecology for School Feeding (PASF), Murang'a County","Statistician / Data Analyst","Dec 2025 – Feb 2026","570","quant eval","Quantitative analysis, tool development and training, validation workshops, inception report."],
+    ["Sign of Hope / BMZ","Feasibility Study – Climate-Smart Livelihoods, Sustainable WASH and Peacebuilding, Marsabit County","Statistician / Data Analyst","Nov 2025 – Jan 2026","265","quant eval","Cleaned and analysed survey data; enumerator training, pretesting and tool scripting."],
+    ["UN Women","Baseline Study – Hamro Sahas Programme on Gender Equality and Social Inclusion, Jumla & Dolpa, Nepal","Statistician / Data Analyst","Nov – Dec 2025","1,093","quant eval","Data cleaning and analysis; tables and cross-tabulations; report writing."],
+    ["Terre des Hommes NL","Artificial Intelligence (AI) and Sexual Exploitation of Children (SEC)","Associate Consultant","Nov – Dec 2025","","qual","FGD transcription, stakeholder workshops, consultations, protocol review and report writing."],
+    ["Search for Common Ground Kenya","Baseline – Women's Leadership in P/CVE Among Security & Justice Institutions in Tana River, Lamu, Kilifi and Kwale","Co-Lead & Statistician","May – Jul 2025","400","quant qual lead eval","Led survey analysis; conducted KIIs and FGDs; coordinated field debriefs and data quality checks."],
+    ["UNICEF Kenya","Gender-Based Analysis Plus (GBA+) of the WASH Programme","Data Analyst","Mar – Aug 2025","426","quant","Data cleaning and analysis; tool development, desk review and report writing."],
+    ["UNICEF Kenya","Rapid Gender Analysis (RGA) and Climate Change in Kenya","Qualitative Researcher","Mar – Apr 2025","","qual","Tool development, stakeholder consultations, qualitative data collection, analysis and reporting."],
+    ["UN Women","Public Perceptions of Governance – Trust, Transparency, Accountability and Inclusiveness in Nepal","Research Associate","Mar – Apr 2025","","quant","Questionnaire pretesting; led tool digitisation and scripting."],
+    ["DanChurchAid (DCA)","Thematic Evaluation of DCA's Human Rights-Based Approach in Nepal, Myanmar, South Sudan and CAR","Quantitative Researcher","Nov 2024 – Apr 2025","60","quant eval","Data cleaning and analysis; tool development, inception report and proposal writing."],
+    ["USAID / Hope to Live","Baseline – Preventative Care for Older Adults in Kisumu, Siaya and Homa Bay","Quantitative Researcher","Nov 2024 – Jan 2025","338","quant lead eval","Led data analysis; coordinated fieldwork, trained enumerators, ensured data quality and reporting."],
+    ["Youth Alive! Kenya","Manual, Advocacy, Partnerships and Capacity Building for Global Action Local Empowerment","Research Associate","Aug – Oct 2024","","qual","Developed training manuals; supported inception report, presentations and proposal."],
+    ["Terre des Hommes NL","Safety for Children and their Rights Online (SCROL) – Kilifi, Kisumu and Nairobi","Co-Investigator / Qualitative Researcher","Jun 2024 – Jan 2025","","qual lead","Qualitative data collection, transcription, translation, tools, inception report and reporting."],
+    ["FAWE","End-Term Evaluation of the Tamatisha Project – Nairobi, Kajiado, Machakos, Narok and Nakuru","Co-Lead & Data Analyst","Jan – Feb 2024","270","quant lead eval","Led analysis and report writing; managed data collection, quality and enumerator training."],
+    ["Simprints / DFAT","Awareness of and Access to Social Protection Schemes Among Vaccination Centre Attendees","Data Analyst","Sep – Nov 2023","306","quant","Cleaned and analysed survey data; tables, visualisations and reporting."],
+    ["British Red Cross","Technical Assessment of Climate Change Adaptation and WASH in Low-Income Communities","Data Analyst","Nov – Dec 2023","364","quant","Cleaned and analysed data; visualisations and reporting."],
+    ["ECPAT International","Baseline of MUKTI South Asia","Data Analyst","Sep – Nov 2023","210","quant eval","Data cleaning and analysis; tables and report writing."],
+    ["Save the Children","Online to Offline Abuse and Violence Faced by Children","Data Analyst","Aug – Dec 2023","405","quant","Cleaned and analysed survey data; visual outputs and reporting."],
+    ["UN Women","Baseline Study of the UN Women Strategic Note","Data Analyst","Aug – Dec 2023","524","quant eval","Data extraction, cleaning and analysis; tables, visuals and reporting."],
+    ["CHASE Africa","External Evaluation of 12 Community Health & Sustainable Environment Partners in Kenya and Uganda","Qualitative Researcher","Aug – Sep 2023","","qual eval","Transcribed and translated KIIs, FGDs and IDIs."],
+    ["Save the Children","Study on the Effectiveness of Home Schooling","Data Analyst","Jul – Sep 2023","400","quant","Cleaned and analysed survey data; tables and reporting."],
+    ["Fund for Global Human Rights","Global Grantee Survey in 66 Countries","Statistician","Jun – Dec 2023","284","quant","Data cleaning and analysis; secondary data mining, analysis matrices and validation workshops."]
+  ];
+  const grid = document.getElementById('projGrid');
+  grid.innerHTML = projects.map(([client,title,role,date,n,tags,desc]) => `
+    <article class="proj" data-tags="${tags}">
+      <div class="client">${client}</div>
+      <h3>${title}</h3>
+      <div class="row"><span class="tag">${role}</span><span class="tag">${date}</span>${n?`<span class="tag n">n = ${n}</span>`:''}</div>
+      <p>${desc}</p>
+    </article>`).join('');
+
+  document.querySelectorAll('.filter').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    const f = b.dataset.f;
+    document.querySelectorAll('.proj').forEach(p => p.classList.toggle('hide', f !== 'all' && !p.dataset.tags.split(' ').includes(f)));
+  }));
+
+  // ---- Certifications ----
+  const certs = [
+    ["Strengthening Women's Leadership in the Gender-Climate-Peace Nexus","UNITAR","Jan – Apr 2026"],
+    ["Gender Equality and Global Markets","UN Sustainable Stock Exchange & UN Women","Sep 2025"],
+    ["Data Governance","African Population and Health Research Center (APHRC)","Sep 2025"],
+    ["FHI360: From Data Collection to Data Use","Philanthropy University","Aug 2025"],
+    ["Gender Equity and Social Inclusion: The Basics","IRC WASH","Jul 2025"],
+    ["Africa Climate & Health Data Capacity Accelerator Network (CAN) Cohort 3","Global Partnership for Sustainable Development Data","Jun 2025"],
+    ["Gender Transformative Research: From Proposal Writing to Evaluation","CGIAR","Feb 2025"],
+    ["Field Evaluation","Save the Children","Feb 2025"],
+    ["AI Augmented Professional Development Skills in the Digital Age","ALX – AI Career Essentials","Nov 2024"],
+    ["CIPIT Data Protection Course","Strathmore University","Oct 2024"],
+    ["MEAL Essentials","DisasterReady","Oct 2024"],
+    ["Introduction to Sampling for Quantitative Surveys","Humanitarian Leadership Academy","Sep 2024"],
+    ["Fundamentals of Data Analytics for Social Impact Programs","Data for Development","Sep 2024"],
+    ["Humanitarian Needs Assessment E-Learning Program","Kobo Toolbox Academy","Sep 2024"],
+    ["Data Fundamentals","IBM SkillsBuild","Aug 2024"],
+    ["Introduction to Excel","Coursera","Sep 2023"],
+    ["Statistical Software Packages (Excel, SPSS, STATA, EViews, GretL, R)","Chuka University","May 2018"]
+  ];
+  document.getElementById('certGrid').innerHTML = certs.map(([t,i,d]) => `
+    <div class="cert"><div class="ico">✓</div><div><h4>${t}</h4><small>${i}</small><small>${d}</small></div></div>`).join('');
+
+  // ---- Nav highlight, back-to-top, year ----
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const navLinks = [...document.querySelectorAll('.links a')];
+  navLinks.forEach(a => a.addEventListener('click', () => document.querySelector('.links').classList.remove('open')));
+  const ids = navLinks.map(a => a.getAttribute('href').slice(1));
+  const topBtn = document.querySelector('.to-top');
+  window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('show', scrollY > 600);
+    let cur = ids[0];
+    ids.forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 120) cur = id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  });
+</script>
+</body>
+</html>
